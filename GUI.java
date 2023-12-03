@@ -64,7 +64,9 @@ public class GUI {
     }
 
     private void save(ActionEvent e) {
+        // Skapa en tvådimensionell array för att lagra data från JTable.
         Object[][] tableData = new Object[model.getRowCount()][model.getColumnCount()];
+        // Loopa igenom varje rad & kolumn i JTable och hämtar sedan värdet fr¨n cellen och lägger till det i tableData
         for (int i = 0; i < model.getRowCount(); i++) {
             for (int j = 0; j < model.getColumnCount(); j++) {
                 tableData[i][j] = model.getValueAt(i, j);
